@@ -9,10 +9,10 @@
 #---------------------------------#
 
 # Retain the caches node and bower packages.
-cache:
-  - C:\Users\appveyor\AppData\Roaming\npm-cache
-  - C:\Users\appveyor\AppData\Roaming\bower\cache\packages
-  - node_modules
+#cache:
+#  - C:\Users\appveyor\AppData\Roaming\npm-cache
+#  - C:\Users\appveyor\AppData\Roaming\bower\cache\packages
+#  - node_modules
 
 # version format
 version: 0.1.{build}
