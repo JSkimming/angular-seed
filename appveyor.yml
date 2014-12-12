@@ -1,0 +1,43 @@
+﻿# Notes:
+#   - Minimal appveyor.yml file is an empty file. All sections are optional.
+#   - Indent each level of configuration with 2 spaces. Do not use tabs!
+#   - All section names are case-sensitive.
+#   - Section names should be unique on each level.
+
+#---------------------------------#
+#      general configuration      #
+#---------------------------------#
+
+# Retain the caches node and bower packages.
+#cache:
+#  - C:\Users\appveyor\AppData\Roaming\npm-cache
+#  - C:\Users\appveyor\AppData\Roaming\bower\cache\packages
+#  - node_modules
+
+# version format
+version: 0.1.{build}
+
+#---------------------------------#
+#    environment configuration    #
+#---------------------------------#
+
+# http://blog.appveyor.com/2014/06/04/shallow-clone-for-git-repositories/
+shallow_clone: true
+
+#---------------------------------#
+#       build configuration       #
+#---------------------------------#
+
+# build Configuration, i.e. Debug, Release, etc.
+build_script: echo Nothing to see here
+
+# scripts to run before build
+before_build: |
+  node -v
+  npm install
+
+#---------------------------------#
+#       tests configuration       #
+#---------------------------------#
+
+test_script: npm run test-single-run
